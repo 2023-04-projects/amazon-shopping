@@ -2,7 +2,7 @@ package com.khadri.shopping.amazon;
 
 import java.util.Scanner;
 
-import com.khadri.stock.category.Category;
+import com.khadri.shopping.amazon.stock.category.Category;
 
 public class AmazonDriver {
 

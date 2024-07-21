@@ -1,4 +1,4 @@
-package com.khadri.stock.category;
+package com.khadri.shopping.amazon.stock.category;
 
 import java.util.Scanner;
 
