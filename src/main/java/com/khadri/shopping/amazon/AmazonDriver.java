@@ -12,17 +12,21 @@ public class AmazonDriver {
 		// Stock[] values = Stock.values();
 		Category category = new Category();
 
-		while (true) {
-			System.out.println("Choose any one Category:(1,2,3) ");
+		boolean isContinueShopping=false;
+		
+		do {
+
+			System.out.println("########## Home Page ##########");
 			System.out.println("1.Mens_wear");
 			System.out.println("2.Kids_wear");
 			System.out.println("3.Womens_wear");
 			System.out.println("4.Previous");
 
+			System.out.println("Choose any one Category:(1,2,3) ");
 			int option = scanner.nextInt();
 			switch (option) {
 			case 1:
-				category.mensWear();
+				category.mensWear(isContinueShopping);
 				break;
 			case 2:
 				category.kidsWear();
@@ -40,7 +44,7 @@ public class AmazonDriver {
 				System.exit(0);
 			}
 
-		}
+		}while (isContinueShopping);
 
 	}
 }
