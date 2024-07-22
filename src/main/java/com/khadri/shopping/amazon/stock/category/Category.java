@@ -1,22 +1,31 @@
 package com.khadri.shopping.amazon.stock.category;
 
+<<<<<<< HEAD
 import java.util.Collection;
+=======
+>>>>>>> 3bdb93d2aaaf42850b69db45819d5849b0d9aa86
 import java.util.List;
 import java.util.Scanner;
 
 import com.khadri.shopping.amazon.cart.Cart;
 import com.khadri.shopping.amazon.cart.Item;
+<<<<<<< HEAD
 import com.khadri.shopping.amazon.price.data.Jeans;
 import com.khadri.shopping.amazon.price.data.JeansData;
+=======
+>>>>>>> 3bdb93d2aaaf42850b69db45819d5849b0d9aa86
 import com.khadri.shopping.amazon.price.data.LongFrock;
 import com.khadri.shopping.amazon.price.data.LongFrockData;
 import com.khadri.shopping.amazon.price.data.LongFrockType;
 import com.khadri.shopping.amazon.price.data.NightWear;
 import com.khadri.shopping.amazon.price.data.NightWearData;
 import com.khadri.shopping.amazon.price.data.NightWearType;
+<<<<<<< HEAD
 import com.khadri.shopping.amazon.price.data.Shirt;
 import com.khadri.shopping.amazon.price.data.ShirtData;
 import com.khadri.shopping.amazon.price.data.ShirtType;
+=======
+>>>>>>> 3bdb93d2aaaf42850b69db45819d5849b0d9aa86
 import com.khadri.shopping.amazon.price.data.Shorts;
 import com.khadri.shopping.amazon.price.data.ShortsData;
 import com.khadri.shopping.amazon.price.data.ShortsType;
@@ -72,6 +81,7 @@ public class Category {
 			}
 			break;
 		case 2:
+<<<<<<< HEAD
 			System.out.println("########## Item Types ##########");
 			JeansData.getJeansType().stream().forEach(eachType -> {
 				System.out.println(eachType.getType());
@@ -139,6 +149,50 @@ public class Category {
 
 			break;
 
+=======
+			System.out.println("Shorts- Selected");
+
+			break;
+			
+		case 3:
+			
+			System.out.println("########## Item Types ##########");
+			List<ShortsType> shortsType = ShortsData.getShortsType();
+
+			shortsType.stream().forEach(eachType -> {
+				System.out.println(eachType.getType());
+			});
+
+			System.out.println("Please enter item type");
+			String itemType2 = scanner.next();
+			shortsType.stream().filter(each -> each.getType().equalsIgnoreCase(itemType2)).findFirst()
+					.get().getListOfShorts().forEach(eachEntry -> {
+						System.out.println(eachEntry.getSNo() + ", Brand Name :" + eachEntry.getBrandName()
+								+ ", Price :" + eachEntry.getPrice() + ", Discount" + eachEntry.getDiscount());
+					});
+
+			System.out.println("Choose Item Number: ");
+			int itemNo2 = scanner.nextInt();
+
+			Shorts shorts = ShortsData.getShortsType().stream()					
+					.filter(eachType -> eachType.getType().equalsIgnoreCase(itemType2)).findFirst().get()
+					.getListOfShorts().stream().filter(each -> each.getSNo().equals(itemNo2)).findFirst().get();
+
+			Item item2 = new Item(shorts.getBrandName(), shorts.getPrice(), shorts.getDiscount());
+			Cart.cartItems.add(item2);
+
+			System.out.println("do you want to continue shopping ? (yes/no)");
+			String decision2 = scanner.next();
+			if (decision2.equalsIgnoreCase("yes")) {
+				isContinueShopping = true;
+			} else {
+				System.out.println("############### Billing ############");
+
+			}
+
+			break;
+		
+>>>>>>> 3bdb93d2aaaf42850b69db45819d5849b0d9aa86
 		case 4:
 			System.out.println("Back to menu ");
 
@@ -153,19 +207,31 @@ public class Category {
 	}
 
 	public void kidsWear() {
+<<<<<<< HEAD
 		System.out.println("You entered into kids-wear");
+=======
+		System.out.println("you entered into kids-wear");
+>>>>>>> 3bdb93d2aaaf42850b69db45819d5849b0d9aa86
 
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("Select one option");
 		System.out.println("1.Shirts");
+<<<<<<< HEAD
 		System.out.println("2.nightwear");
 
 		System.out.println("3.Previous");
+=======
+		System.out.println("2.NightWear");
+
+		System.out.println("4.Previous");
+		List<NightWearType> nightWearType = NightWearData.getNightWearType();
+>>>>>>> 3bdb93d2aaaf42850b69db45819d5849b0d9aa86
 
 		int choice = scanner.nextInt();
 		List<ShirtType> shirtTypes = ShirtData.getShirtTypes();
 		switch (choice) {
 		case 1:
+<<<<<<< HEAD
 			System.out.println("########## Item Types ##########");
 
 			ShirtData.getShirtTypes().stream().forEach(eachType -> {
@@ -198,10 +264,14 @@ public class Category {
 				System.out.println("############### Billing ############");
 
 			}
+=======
+			System.out.println("Shirts Selected");
+>>>>>>> 3bdb93d2aaaf42850b69db45819d5849b0d9aa86
 
 			break;
 		case 2:
 			System.out.println("########## Item Types ##########");
+<<<<<<< HEAD
 			List<NightWearType> nightWearType = NightWearData.getNightWearType();
 
 			nightWearType.stream().forEach(eachType -> {
@@ -214,12 +284,28 @@ public class Category {
 					.getListOfNightWear().forEach(eachEntry -> {
 						System.out.println(eachEntry.getNo() + ", Brand Name :" + eachEntry.getBrandName() + ", Price :"
 								+ eachEntry.getPrice() + ", Discount" + eachEntry.getDiscount());
+=======
+			nightWearType.stream().forEach(eachType -> {
+				System.out.println(eachType.getType());
+			});
+
+			System.out.println("Please enter item type");
+			String itemType2 = scanner.next();
+			nightWearType.stream().filter(each -> each.getType().equalsIgnoreCase(itemType2)).findFirst()
+					.get().getListOfNightWear().forEach(eachEntry -> {
+						System.out.println(eachEntry.getNo() + ", Brand Name :" + eachEntry.getBrandName()
+								+ ", Price :" + eachEntry.getPrice() + ", Discount" + eachEntry.getDiscount());
+>>>>>>> 3bdb93d2aaaf42850b69db45819d5849b0d9aa86
 					});
 
 			System.out.println("Choose Item Number: ");
 			int itemNo2 = scanner.nextInt();
 
+<<<<<<< HEAD
 			NightWear nightWear = NightWearData.getNightWearType().stream()
+=======
+			NightWear nightWear = NightWearData.getNightWearType().stream()					
+>>>>>>> 3bdb93d2aaaf42850b69db45819d5849b0d9aa86
 					.filter(eachType -> eachType.getType().equalsIgnoreCase(itemType2)).findFirst().get()
 					.getListOfNightWear().stream().filter(each -> each.getNo().equals(itemNo2)).findFirst().get();
 
@@ -235,7 +321,11 @@ public class Category {
 
 			}
 			break;
+<<<<<<< HEAD
 
+=======
+		
+>>>>>>> 3bdb93d2aaaf42850b69db45819d5849b0d9aa86
 		case 3:
 			System.out.println("Back to menu ");
 
@@ -260,6 +350,7 @@ public class Category {
 
 		int choice = scanner.nextInt();
 		switch (choice) {
+<<<<<<< HEAD
 
 		case 1:
 			System.out.println("########## Item Types ##########");
@@ -291,6 +382,11 @@ public class Category {
 			if (decisions.equalsIgnoreCase("yes")) {
 				boolean isContinueShopping = true;
 			}
+=======
+		
+		case 1:
+			System.out.println("Sarry -Selected");
+>>>>>>> 3bdb93d2aaaf42850b69db45819d5849b0d9aa86
 			break;
 		case 2:
 			System.out.println("########## Item Types ##########");
@@ -302,16 +398,27 @@ public class Category {
 
 			System.out.println("Please enter item type");
 			String itemType2 = scanner.next();
+<<<<<<< HEAD
 			longFrockType.stream().filter(each -> each.getType().equalsIgnoreCase(itemType2)).findFirst().get()
 					.getListOfLongFrock().forEach(eachEntry -> {
 						System.out.println(eachEntry.getNo() + ", Brand Name :" + eachEntry.getBrandName() + ", Price :"
 								+ eachEntry.getPrice() + ", Discount" + eachEntry.getDiscount());
+=======
+			longFrockType.stream().filter(each -> each.getType().equalsIgnoreCase(itemType2)).findFirst()
+					.get().getListOfLongFrock().forEach(eachEntry -> {
+						System.out.println(eachEntry.getNo() + ", Brand Name :" + eachEntry.getBrandName()
+								+ ", Price :" + eachEntry.getPrice() + ", Discount" + eachEntry.getDiscount());
+>>>>>>> 3bdb93d2aaaf42850b69db45819d5849b0d9aa86
 					});
 
 			System.out.println("Choose Item Number: ");
 			int itemNo2 = scanner.nextInt();
 
+<<<<<<< HEAD
 			LongFrock longFrock = LongFrockData.getLongFrockType().stream()
+=======
+			LongFrock longFrock = LongFrockData.getLongFrockType().stream()					
+>>>>>>> 3bdb93d2aaaf42850b69db45819d5849b0d9aa86
 					.filter(eachType -> eachType.getType().equalsIgnoreCase(itemType2)).findFirst().get()
 					.getListOfLongFrock().stream().filter(each -> each.getNo().equals(itemNo2)).findFirst().get();
 
@@ -328,7 +435,10 @@ public class Category {
 			}
 
 			break;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 3bdb93d2aaaf42850b69db45819d5849b0d9aa86
 		case 3:
 			System.out.println("Back to menu ");
 
