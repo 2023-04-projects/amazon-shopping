@@ -29,10 +29,10 @@ public class AmazonDriver {
 				category.mensWear(isContinueShopping);
 				break;
 			case 2:
-				category.kidsWear();
+				category.kidsWear(isContinueShopping);
 				break;
 			case 3:
-				category.womensWear();
+				category.womensWear(isContinueShopping);
 				break;
 
 			case 4:
@@ -45,6 +45,8 @@ public class AmazonDriver {
 			}
 
 		}while (isContinueShopping);
+		
+		scanner.close();
 
 	}
 }

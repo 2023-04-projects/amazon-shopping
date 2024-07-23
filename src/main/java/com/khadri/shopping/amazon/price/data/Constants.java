@@ -3,7 +3,6 @@ package com.khadri.shopping.amazon.price.data;
 public enum Constants {
 
 	ROUND_NECK, COLOR_NECK,
-<<<<<<< HEAD
 	BOOTCUT,SLIMFIT,
 	FORMAL_SHIRTS,CHECKS_SHIRTS,
 	SILK_SARRY,PATTU_SARRY,
@@ -11,10 +10,4 @@ public enum Constants {
 	NIGHT_DRESS, SHORTS,
 	BALL_GOWNS, BUBBLE_DRESS;
 
-	
-=======
-	CARGO_SHORTS, BOARD_SHORTS,
-	NIGHT_DRESS, SHORTS,
-	BALL_GOWNS, BUBBLE_DRESS;
->>>>>>> 3bdb93d2aaaf42850b69db45819d5849b0d9aa86
 }
