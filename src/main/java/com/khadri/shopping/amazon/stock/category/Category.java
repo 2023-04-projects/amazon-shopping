@@ -13,6 +13,8 @@ import com.khadri.shopping.amazon.price.data.LongFrockType;
 import com.khadri.shopping.amazon.price.data.NightWear;
 import com.khadri.shopping.amazon.price.data.NightWearData;
 import com.khadri.shopping.amazon.price.data.NightWearType;
+import com.khadri.shopping.amazon.price.data.Sarry;
+import com.khadri.shopping.amazon.price.data.SarryData;
 import com.khadri.shopping.amazon.price.data.Shirt;
 import com.khadri.shopping.amazon.price.data.ShirtData;
 import com.khadri.shopping.amazon.price.data.Shorts;
@@ -32,6 +34,8 @@ public class Category {
 		System.out.println("4.Previous");
 
 		System.out.println("Choose one option : ");
+		System.out.println("=============================");
+
 		int choice = scanner.nextInt();
 
 		switch (choice) {
@@ -42,6 +46,8 @@ public class Category {
 			});
 
 			System.out.println("Please enter item type");
+			System.out.println("=============================");
+
 			String itemType = scanner.next();
 			TShirtData.getTshirtTypes().stream().filter(each -> each.getType().equalsIgnoreCase(itemType)).findFirst()
 					.get().getListOfTShirts().forEach(eachEntry -> {
@@ -50,6 +56,8 @@ public class Category {
 					});
 
 			System.out.println("Choose Item Number: ");
+			System.out.println("=============================");
+
 			int itemNo = scanner.nextInt();
 
 			TShirt tShirt = TShirtData.getTshirtTypes().stream()
@@ -74,6 +82,8 @@ public class Category {
 				System.out.println(eachType.getType());
 			});
 			System.out.println("Please enter item type");
+			System.out.println("=============================");
+
 			String itemType1 = scanner.next();
 			JeansData.getJeansType().stream().filter(each -> each.getType().equalsIgnoreCase(itemType1)).findFirst()
 					.get().getListOfJeans().forEach(eachEntry -> {
@@ -81,6 +91,8 @@ public class Category {
 								+ ", Price :" + eachEntry.getPrice() + ", Discount:" + eachEntry.getDiscount());
 					});
 			System.out.println("Choose Item Number: ");
+			System.out.println("=============================");
+
 			int itemNo1 = scanner.nextInt();
 
 			Jeans jeans = JeansData.getJeansType().stream()
@@ -110,6 +122,8 @@ public class Category {
 			});
 
 			System.out.println("Please enter item type");
+			System.out.println("=============================");
+
 			String itemType2 = scanner.next();
 			shortsType.stream().filter(each -> each.getType().equalsIgnoreCase(itemType2)).findFirst().get()
 					.getListOfShorts().forEach(eachEntry -> {
@@ -118,6 +132,8 @@ public class Category {
 					});
 
 			System.out.println("Choose Item Number: ");
+			System.out.println("=============================");
+
 			int itemNo2 = scanner.nextInt();
 
 			Shorts shorts = ShortsData.getShortsType().stream()
@@ -173,6 +189,8 @@ public class Category {
 			});
 
 			System.out.println("Please enter item type");
+			System.out.println("=============================");
+
 			String itemType = scanner.next();
 			ShirtData.getShirtTypes().stream().filter(each -> each.getType().equalsIgnoreCase(itemType)).findFirst()
 					.get().getListOfShirts().forEach(eachEntry -> {
@@ -181,6 +199,8 @@ public class Category {
 					});
 
 			System.out.println("Choose Item Number: ");
+			System.out.println("=============================");
+
 			int itemNo = scanner.nextInt();
 
 			Shirt Shirt = ShirtData.getShirtTypes().stream()
@@ -210,6 +230,8 @@ public class Category {
 			});
 
 			System.out.println("Please enter item type");
+			System.out.println("=============================");
+
 			String itemType2 = scanner.next();
 			nightWearType.stream().filter(each -> each.getType().equalsIgnoreCase(itemType2)).findFirst().get()
 					.getListOfNightWear().forEach(eachEntry -> {
@@ -218,6 +240,8 @@ public class Category {
 					});
 
 			System.out.println("Choose Item Number: ");
+			System.out.println("=============================");
+
 			int itemNo2 = scanner.nextInt();
 
 			NightWear nightWear = NightWearData.getNightWearType().stream()
@@ -268,6 +292,8 @@ public class Category {
 			});
 
 			System.out.println("Please enter item type");
+			System.out.println("=============================");
+
 			String itemType = scanner.next();
 			SarryData.getSarryTypes().stream().filter(each -> each.getType().equalsIgnoreCase(itemType)).findFirst()
 					.get().getListOfSarry().forEach(eachEntry -> {
@@ -276,6 +302,8 @@ public class Category {
 					});
 
 			System.out.println("Choose Item Number: ");
+			System.out.println("=============================");
+
 			int itemNo = scanner.nextInt();
 
 			Sarry Sarry = SarryData.getSarryTypes().stream()
@@ -300,6 +328,9 @@ public class Category {
 			});
 
 			System.out.println("Please enter item type");
+			System.out.println("=============================");
+
+			
 			String itemType2 = scanner.next();
 
 			longFrockType.stream().filter(each -> each.getType().equalsIgnoreCase(itemType2)).findFirst().get()
@@ -309,6 +340,7 @@ public class Category {
 					});
 
 			System.out.println("Choose Item Number: ");
+			System.out.println("=============================");
 			int itemNo2 = scanner.nextInt();
 
 			LongFrock longFrock = LongFrockData.getLongFrockType().stream()
