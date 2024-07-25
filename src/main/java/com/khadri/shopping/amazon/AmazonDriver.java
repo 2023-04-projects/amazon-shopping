@@ -12,8 +12,8 @@ public class AmazonDriver {
 		// Stock[] values = Stock.values();
 		Category category = new Category();
 
-		boolean isContinueShopping = false;
-
+		boolean isContinueShopping=false;
+		
 		do {
 
 			System.out.println("########## Home Page ##########");
@@ -23,7 +23,6 @@ public class AmazonDriver {
 			System.out.println("4.Previous");
 
 			System.out.println("Choose any one Category:(1,2,3) ");
-			System.out.println("=============================");
 			int option = scanner.nextInt();
 			switch (option) {
 			case 1:
@@ -45,8 +44,8 @@ public class AmazonDriver {
 				System.exit(0);
 			}
 
-		} while (isContinueShopping);
-
+		}while (isContinueShopping);
+		
 		scanner.close();
 
 	}
