@@ -35,7 +35,6 @@ public class Category {
 
 		System.out.println("Choose one option : ");
 		System.out.println("=============================");
-
 		int choice = scanner.nextInt();
 
 		switch (choice) {
@@ -330,7 +329,6 @@ public class Category {
 			System.out.println("Please enter item type");
 			System.out.println("=============================");
 
-			
 			String itemType2 = scanner.next();
 
 			longFrockType.stream().filter(each -> each.getType().equalsIgnoreCase(itemType2)).findFirst().get()
