@@ -66,7 +66,6 @@ public class ShoppingBill {
 		System.out.println("\t\t\t\t----------------Thank You for Shopping!!-----------------");
 		System.out.println("\t\t\t\t                     Visit Again");
 		scan.close();
-
 		}
 }
 
