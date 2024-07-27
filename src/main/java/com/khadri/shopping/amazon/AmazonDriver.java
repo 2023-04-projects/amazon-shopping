@@ -5,11 +5,9 @@ import java.util.Scanner;
 import com.khadri.shopping.amazon.stock.category.Category;
 
 public class AmazonDriver {
-
 	public static void main(String[] args) {
 
 		Scanner scanner = new Scanner(System.in);
-		// Stock[] values = Stock.values();
 		Category category = new Category();
 
 		boolean isContinueShopping = false;
