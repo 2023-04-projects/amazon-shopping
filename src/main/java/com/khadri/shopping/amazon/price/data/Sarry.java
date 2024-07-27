@@ -1,19 +1,19 @@
 package com.khadri.shopping.amazon.price.data;
 
 public class Sarry {
-	private Integer No;
+	private Integer no;
 	private String brandName;
 	private Double price;
 	private Double discount;
 	public Sarry(Integer no, String brandName, Double price, Double discount) {
 		super();
-		No = no;
+		this.no = no;
 		this.brandName = brandName;
 		this.price = price;
 		this.discount = discount;
 	}
 	public Integer getNo() {
-		return No;
+		return no;
 	}
 	public String getBrandName() {
 		return brandName;
