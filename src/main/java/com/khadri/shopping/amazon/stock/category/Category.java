@@ -113,14 +113,12 @@ public class Category {
 			break;
 
 		case 3:
-
 			System.out.println("########## Item Types ##########");
 			List<ShortsType> shortsType = ShortsData.getShortsType();
 
 			shortsType.stream().forEach(eachType -> {
 				System.out.println(eachType.getType());
 			});
-
 			System.out.println("Please enter item type");
 			System.out.println("=============================");
 
