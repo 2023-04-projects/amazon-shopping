@@ -1,6 +1,6 @@
 package com.khadri.shopping.amazon.Invoice;
 
-public class Belling {
+public class Billing {
 
 	private String id;
 	private String pname;
@@ -8,7 +8,7 @@ public class Belling {
 	private double price;
 	private double totalPrice;
 
-	Belling(String id, String pname, int qty, double price, double totalPrice) {
+	Billing(String id, String pname, int qty, double price, double totalPrice) {
 		this.id = id;
 		this.pname = pname;
 		this.qty = qty;

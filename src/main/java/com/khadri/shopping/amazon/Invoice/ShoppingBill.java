@@ -31,7 +31,7 @@ public class ShoppingBill {
 		System.out.println("Date: " + formatter.format(date) + "  " + days[calendar.get(Calendar.DAY_OF_WEEK) - 1]
 				+ "\t\t\t\t\t\t (+91) 9848022338O");
 		Scanner scan = new Scanner(System.in);
-		List<Belling> product = new ArrayList<Belling>();
+		List<Billing> product = new ArrayList<Billing>();
 		do {
 			System.out.println("Enter the product details: ");
 			System.out.print("Product ID: ");
@@ -44,13 +44,13 @@ public class ShoppingBill {
 			price = scan.nextDouble();
 			totalPrice = price * quantity;
 			overAllPrice = overAllPrice + totalPrice;
-			product.add(new Belling(id, productName, quantity, price, totalPrice));
+			product.add(new Billing(id, productName, quantity, price, totalPrice));
 			System.out.print("Want to add more items? (y or n): ");
 			c = scan.next().charAt(0);
 			scan.nextLine();
 		} while (c == 'y' || c == 'Y');
-		Belling.displayFormat();
-		for (Belling p : product) {
+		Billing.displayFormat();
+		for (Billing p : product) {
 		  p.display();
 		}
 		System.out.println("\n\t\t\t\t\t\t\t\t\t\tTotal Amount (Rs.) " + overAllPrice);
