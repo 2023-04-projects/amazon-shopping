@@ -28,6 +28,7 @@ public class Category {
 	public void mensWear(boolean isContinueShopping) {
 		System.out.println("########## Mens Wears ##########");
 		Scanner scanner = new Scanner(System.in);
+		
 		System.out.println("1.T-shirts");
 		System.out.println("2.Jeans");
 		System.out.println("3.Shorts");
