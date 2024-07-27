@@ -1,4 +1,4 @@
-package com.khadri.shopping.amazon.stock.category;
+package com.khadri.shopping.amazon.price.data;
 
 public class Sarry {
 	private Integer No;

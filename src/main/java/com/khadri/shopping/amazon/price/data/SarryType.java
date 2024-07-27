@@ -1,8 +1,6 @@
-package com.khadri.shopping.amazon.stock.category;
+package com.khadri.shopping.amazon.price.data;
 
 import java.util.List;
-
-import com.khadri.shopping.amazon.price.data.Shirt;
 
 public class SarryType {
 	private String type;

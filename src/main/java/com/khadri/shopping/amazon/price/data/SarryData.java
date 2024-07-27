@@ -1,10 +1,6 @@
-package com.khadri.shopping.amazon.stock.category;
+package com.khadri.shopping.amazon.price.data;
 
 import java.util.List;
-
-import com.khadri.shopping.amazon.price.data.Constants;
-import com.khadri.shopping.amazon.price.data.Shirt;
-import com.khadri.shopping.amazon.price.data.ShirtType;
 
 public class SarryData {
 	public static List<SarryType> getSarryTypes() {
