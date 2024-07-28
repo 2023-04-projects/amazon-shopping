@@ -115,7 +115,6 @@ public class Category {
 		case 3:
 			System.out.println("########## Item Types ##########");
 			List<ShortsType> shortsType = ShortsData.getShortsType();
-
 			shortsType.stream().forEach(eachType -> {
 				System.out.println(eachType.getType());
 			});
@@ -131,25 +130,19 @@ public class Category {
 
 			System.out.println("Choose Item Number: ");
 			System.out.println("=============================");
-
 			int itemNo2 = scanner.nextInt();
-
 			Shorts shorts = ShortsData.getShortsType().stream()
 					.filter(eachType -> eachType.getType().equalsIgnoreCase(itemType2)).findFirst().get()
 					.getListOfShorts().stream().filter(each -> each.getSNo().equals(itemNo2)).findFirst().get();
-
 			Item item2 = new Item(shorts.getBrandName(), shorts.getPrice(), shorts.getDiscount());
 			Cart.cartItems.add(item2);
-
 			System.out.println("do you want to continue shopping ? (yes/no)");
 			String decision2 = scanner.next();
 			if (decision2.equalsIgnoreCase("yes")) {
 				isContinueShopping = true;
 			} else {
 				System.out.println("############### Billing ############");
-
 			}
-
 			break;
 
 		case 4:
@@ -160,7 +153,6 @@ public class Category {
 		default:
 			break;
 		}
-
 		scanner.close();
 
 	}
